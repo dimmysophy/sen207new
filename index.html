@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello Everyone</h1>
+    <script>
+      function fearNotLetter(str) {
+        for (var i = 0; i < str.length; i++) {
+          /* code of current character */
+          var code = str.charCodeAt(i)
+
+          /* if code of current character is not equal to first character + no of iteration
+        hence character has been escaped */
+          if (code !== str.charCodeAt(0) + i) {
+            /* if current character has escaped one character find previous char and return */
+            return String.fromCharCode(code - 1)
+          }
+        }
+        return undefined
+      }
+
+      // test here
+      console.log(fearNotLetter('bcdf'))
+
+      function sayhello(name) {
+        name
+        console.log('Hello' + name)
+      }
+      sayhello('henry')
+      function printnumbers() {
+        console.log('1,2,3,4,5,6,7,8,9,10')
+      }
+      printnumbers()
+      function multipleoffive(number) {
+        if (number % 5 == 0) {
+          console.log('This is a multiple of 5')
+        } else {
+          console.log('This is not a multiple of 5')
+        }
+      }
+      multipleoffive(10)
+      function multipleoffive2(number) {
+        if (number % 5 === 0) {
+          console.log('fizz')
+        } else {
+          console.log('no')
+        }
+      }
+      //  multipleoffive2(12)
+      function multipleofthree3(number) {
+        if (number % 3 == 0) {
+          console.log('buzz')
+        } else {
+          console.log('nahh')
+        }
+      }
+      //  multipleofthree3(12)
+      function multipleofboth(number) {
+        if ((number % 3 == 0) & (number % 5 == 0)) {
+          console.log('fizzbuzz')
+        } else {
+          console.log('none')
+        }
+      }
+      // multipleofboth(30)
+      var num
+
+      num = prompt('Enter the number')
+
+      if (num % 5 == 0) {
+          return document.write('Fizz')
+        
+      }
+      if (num % 3 == 0) {
+        document.write('Buzz')
+      } else {
+        document.write(num)
+      }
+    </script>
+  </body>
+</html>
